@@ -33,7 +33,8 @@ second.next=third;                             //10-->20-->30
 third.next=forth;                              //10-->20-->30-->40
 forth.next=fifth;                              //10-->20-->30-->40-->50-->null
                 
-obj.display();
+obj.display();                  //call the display function
+System.out.print(obj.countnode());               //call the countnode function
   
 }
 
@@ -45,6 +46,15 @@ public  void display(){                 //to get the node values output we have 
 
         }
 }
+      public int countnode(){
+              
+              ListNode current = head;
+              int count=0;
+              while(current!=null){
+                      count++;
+                      current=current.next;
+                      return count;
+              }
 
 }
 
